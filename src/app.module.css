@@ -1,0 +1,3 @@
+.checked {
+  @apply bg-blue-600;
+}
