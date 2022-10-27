@@ -1,29 +1,17 @@
-import React from 'react';
-import logo from './logo.png';
+import React from "react"
+import { Switch } from '@headlessui/react'
 
 function App() {
   return (
-    <div className="h-screen flex justify-center items-center">
-    <div className="max-w-sm rounded overflow-hidden shadow-lg p-4">
-      <img className="w-full" src={logo} alt="Sunset in the mountains" />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2"> React-Tailwind </div>
-        <p className="text-gray-700 text-base">
-          A React Starter with Tailwind CSS
-        </p>
-      </div>
-      <div className="px-6 py-4">
-        {["React", "Tailwind"].map(tag =>
-              <span
-                key={tag}
-                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mt-2">
-                {"#" + tag }
-              </span>
-        )}
-      </div>
+    <div className="flex items-center justify-center min-h-screen min-w-full">
+      <Switch
+        className="relative inline-flex h-6 w-10 items-center rounded-full ui-checked:bg-blue-600 bg-gray-200"
+      >
+        <span className="sr-only">Enable notifications</span>
+        <span className="inline-block h-4 w-4 transform rounded-full bg-white transition ui-checked:translate-x-6 translate-x-1" />
+      </Switch>
     </div>
-  </div>
-  );
+  )
 }
 
-export default App;
+export default App
